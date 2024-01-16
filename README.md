@@ -13,6 +13,10 @@ DATABASE_URL="postgresql://username:password@localhost:5432/database?schema=publ
 2. Ensure you have Node.js installed with the following version:
 Node Version: v20.9.0
 
+## Docker Image
+
+https://hub.docker.com/r/sazzadkarim/recipe-web-server
+
 ## Deployed Server
 
 Root URL for the deployed server:
