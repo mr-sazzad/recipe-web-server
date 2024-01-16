@@ -11,6 +11,16 @@ const createNewRecipe = z.object({
   }),
 });
 
+const updateSingleRecipe = z.object({
+  body: z.object({
+    title: z.string().optional(),
+    ingredients: z.array(z.string().optional()).optional(),
+    instructions: z.string().optional(),
+    image: z.string().optional(),
+  }),
+});
+
 export const recipeValidation = {
   createNewRecipe,
+  updateSingleRecipe,
 };
