@@ -1,0 +1,16 @@
+# Dependency directories
+node_modules
+!node_modules/.prisma
+jspm_packages
+
+# Build output
+dist
+tmp
+
+# Various files
+npm-debug.log
+.env
+.DS_Store
+
+# Git directory
+.git
