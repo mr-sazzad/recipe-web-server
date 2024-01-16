@@ -1,48 +1,44 @@
 # Recipe Web Server
 
-this project was developed to create food recipes
-user can create new food recipes also modify existing recipes
-also they able to delete any recipe
+The Recipe Web Server project was developed to create and manage food recipes. Users can create new food recipes, modify existing recipes, and delete any recipe.
 
-`you have to follow this instruction to run this web app`
-```
-.env file
-DATABASE_URL="postgresql://username:password@localhost:5432/database?schema=public"
-PORT
-```
+## Setup Instructions
 
-```
-Node Version
-v20.9.0
-```
+To run this web app, follow these instructions:
 
-Root Url for deployed server
+1. Create a `.env` file with the following environment variables:
 
-`ROOT_URL = https://recipe-web-server-xi.vercel.app/api/v1`
+DATABASE_URL="postgresql://username:password@localhost:5432/database?schema=public" PORT=<your_port_number>
 
-All URLs For Recipes
+2. Ensure you have Node.js installed with the following version:
+Node Version: v20.9.0
 
-`POST: /recipes/create-new-recipe`
+## Deployed Server
 
-`GET: /recipes`
+Root URL for the deployed server:
 
-`GET: /recipes/single-recipe/:id`
+ROOT_URL = https://recipe-web-server-xi.vercel.app/api/v1
 
-`PATCH: /recipes/update-single-recipe/:id`
+## API Endpoints
 
-`DELETE: /recipes/delete-single-recipe/:id`
+### Recipes
 
+- `POST: /recipes/create-new-recipe`
+- `GET: /recipes`
+- `GET: /recipes/single-recipe/:id`
+- `PATCH: /recipes/update-single-recipe/:id`
+- `DELETE: /recipes/delete-single-recipe/:id`
 
-All URLs for Comments
+### Comments
 
-`POST: /comments/create-new-comment`
+- `POST: /comments/create-new-comment`
+- `GET: /comments`
 
-`GET: /comments`
+### Feedback
 
+- `POST: /feedbacks/create-feedback`
+- `GET: /feedbacks`
 
-All URLs for feedback
+---
 
-`POST: /feedbacks/create-feedback`
-
-`GET: /feedbacks`
-
+We hope you find this web server useful for managing your food recipes!
