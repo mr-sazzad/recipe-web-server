@@ -12,8 +12,12 @@ const createNewComment = async (data: Comment): Promise<Comment> => {
   return result;
 };
 
-const getAllComments = async (): Promise<Comment[]> => {
-  const result = await prisma.comment.findMany({});
+const getAllComments = async (id: string): Promise<Comment[]> => {
+  const result = await prisma.comment.findMany({
+    where: {
+      recipeId: id,
+    },
+  });
 
   if (!result) {
     throw new ApiError(500, "internal server error");

@@ -19,7 +19,8 @@ export const createNewComment: RequestHandler = async (req, res, next) => {
 
 export const getAllComments: RequestHandler = async (req, res, next) => {
   try {
-    const result = await commentServices.getAllComments();
+    const { id } = req.params;
+    const result = await commentServices.getAllComments(id);
 
     res.status(200).json({
       success: true,
