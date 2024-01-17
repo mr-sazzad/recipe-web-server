@@ -40,6 +40,9 @@ const getSingleRecipe = (id) => __awaiter(void 0, void 0, void 0, function* () {
             where: {
                 id,
             },
+            include: {
+                comments: true,
+            },
         });
         if (!result) {
             throw new apiErrors_1.default(404, "Recipe not found");

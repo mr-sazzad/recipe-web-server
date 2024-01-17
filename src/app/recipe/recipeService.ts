@@ -32,6 +32,9 @@ const getSingleRecipe = async (id: string): Promise<Recipe> => {
       where: {
         id,
       },
+      include: {
+        comments: true,
+      },
     });
 
     if (!result) {
