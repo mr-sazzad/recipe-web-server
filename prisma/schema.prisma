@@ -25,7 +25,7 @@ model Comment {
   id        String   @id @default(uuid())
   comment   String
   recipeId  String
-  recipe    Recipe   @relation(fields: [recipeId], references: [id])
+  recipe    Recipe   @relation(fields: [recipeId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -34,7 +34,7 @@ model Feedback {
   id        String   @id @default(uuid())
   feedback  String
   name      String
-  image     String
+  image     String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

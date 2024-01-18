@@ -11,6 +11,6 @@ router.post(
   createNewComment
 );
 
-router.get("/", getAllComments);
+router.get("/:id", getAllComments);
 
 export const commentRoutes = router;

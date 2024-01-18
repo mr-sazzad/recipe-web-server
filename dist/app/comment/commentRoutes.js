@@ -10,5 +10,5 @@ const validateRequest_1 = __importDefault(require("../middleware/validateRequest
 const commentValidation_1 = require("./commentValidation");
 const router = (0, express_1.Router)();
 router.post("/create-new-comment", (0, validateRequest_1.default)(commentValidation_1.commentValidation), commentController_1.createNewComment);
-router.get("/", commentController_1.getAllComments);
+router.get("/:id", commentController_1.getAllComments);
 exports.commentRoutes = router;
